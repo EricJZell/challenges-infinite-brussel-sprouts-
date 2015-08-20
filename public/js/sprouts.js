@@ -1,6 +1,5 @@
 // YOUR CODE GOES HERE
-var link = $('.more-sprouts');
-var ul = $('.tweets');
+$('.more-sprouts').hide();
 var nextPage = 2;
 $(window).scroll(function() {
    if($(window).scrollTop() + window.innerHeight == $(document).height()) {
@@ -9,7 +8,7 @@ $(window).scroll(function() {
          nextPage ++;
        }
        for (var i = 0; i < tweets.length; i++){
-         $('ul.tweets').append( "<li class='tweet'><div class='body'>" + tweets[i]["text"] + "</div><div class='user'>" + tweets[i]["username"] + "</div></li>" );
+         $('.tweets').append( "<li class='tweet'><div class='body'>" + tweets[i]["text"] + "</div><div class='user'>" + tweets[i]["username"] + "</div></li>" );
        }
      });
    }
