@@ -24,6 +24,10 @@ def page(page_param)
   end
 end
 
+get '/' do
+  redirect '/tweets'
+end
+
 get "/tweets" do
   page = page(params[:page])
   erb :index, locals: { tweets: tweets(page), page: page }
